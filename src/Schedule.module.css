@@ -1,0 +1,294 @@
+.scheduleContainer {
+  display: grid;
+  grid-template-rows: 50px 1fr max-content;
+  grid-template-areas:
+    "title"
+    "schedule"
+    "buttons";
+}
+
+.scheduleTitle {
+  grid-area: title;
+  font-size: 18px;
+  font-weight: 300;
+  margin-left: 1em;
+}
+
+.weekHeader {
+  margin-left: 1em;
+}
+.schedule {
+  grid-area: schedule;
+  display: flex;
+  flex-direction: row;
+  margin-left: 2em;
+}
+
+.scheduleButtons {
+  grid-area: buttons;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.totalCasesDiv {
+  margin-top: 5em;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.previousWeekButton,
+.nextWeekButton {
+  margin-top: 5em;
+  align-self: flex-end;
+}
+
+.previousWeekButton {
+  margin-right: 2em;
+}
+
+.nextWeekButton {
+  margin-left: 2em;
+}
+
+.disabledWeekButton {
+  pointer-events: none;
+}
+
+.week {
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+}
+
+.weekDay {
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  margin: 0.5em;
+  padding: 0.5em;
+  border: solid white 1px;
+}
+.weekDayToday {
+  border-radius: 7px;
+  color: #1565c0;
+}
+
+.noCasesBox {
+  pointer-events: none;
+}
+
+.scheduleBox {
+  box-shadow: 3px 0px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 7px;
+  background-color: rgb(0, 105, 92);
+  color: white;
+  display: flex;
+  border: solid black 1px;
+  min-width: 150px;
+  max-height: 250px;
+  justify-content: flex-end;
+  padding: 10px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "totalNumberField"
+    "indexCaseField"
+    "followUpField";
+}
+.disabledScheduleBox {
+  pointer-events: none;
+  box-shadow: 3px 0px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 7px;
+  color: #6e7a8a;
+  background: #f3f5f7;
+  display: flex;
+  border: solid #6e7a8a 1px;
+  min-width: 150px;
+  max-height: 250px;
+  justify-content: flex-end;
+  padding: 10px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "totalNumberField"
+    "indexCaseField"
+    "followUpField";
+}
+
+@media only screen and (max-width: 1400px) {
+  .weekDay,
+  .total,
+  .disabledTotal,
+  .index,
+  .followUp {
+    font-size: 14px;
+  }
+
+  .scheduleButtons {
+    margin-bottom: 2em;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .schedule {
+    flex-wrap: wrap;
+  }
+}
+
+.total {
+  border-radius: 7px;
+  cursor: pointer;
+  margin: 0.5rem;
+  padding: 0.8rem;
+  color: black;
+  background-color: white;
+  border: 0.1em solid black;
+  max-height: min-content;
+  grid-area: totalNumberField;
+  display: grid;
+  text-align: center;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "text1"
+    "number1";
+}
+
+.disabledTotal {
+  border: solid #6e7a8a 1px;
+  border-radius: 7px;
+  cursor: pointer;
+  margin: 0.5rem;
+  padding: 0.8rem;
+  background-color: white;
+  max-height: min-content;
+  grid-area: totalNumberField;
+  display: grid;
+  text-align: center;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "text1"
+    "number1";
+}
+
+.total:hover {
+  background-color: #e3f2fd;
+  color: black;
+}
+
+.totalText {
+  grid-area: text1;
+  display: flex;
+  justify-content: center;
+}
+
+.totalNum {
+  grid-area: number1;
+  display: flex;
+  justify-content: center;
+}
+
+.index {
+  margin: 0.5em;
+  grid-area: indexCaseField;
+  display: grid;
+  text-align: center;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "text2"
+    "number2";
+}
+
+.indexText {
+  grid-area: text2;
+  display: flex;
+  justify-content: center;
+}
+
+.indexNum {
+  grid-area: number2;
+  display: flex;
+  justify-content: center;
+}
+
+.followUp {
+  margin: 0.5em;
+  grid-area: followUpField;
+  display: grid;
+  text-align: center;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "text3"
+    "number3";
+}
+
+.followUpText {
+  grid-area: text3;
+  display: flex;
+  justify-content: center;
+}
+
+.followUpNum {
+  grid-area: number3;
+  display: flex;
+  justify-content: center;
+}
+
+.index {
+  margin: 0.5em;
+  grid-area: indexCaseField;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "text2"
+    "number2";
+}
+
+.indexText {
+  grid-area: text2;
+  display: flex;
+  justify-content: center;
+}
+
+.indexNum {
+  grid-area: number2;
+  display: flex;
+  justify-content: center;
+}
+
+.followUp {
+  margin: 0.5em;
+  grid-area: followUpField;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "text3"
+    "number3";
+}
+
+.followUpText {
+  grid-area: text3;
+  display: flex;
+  justify-content: center;
+}
+
+.followUpNum {
+  grid-area: number3;
+  display: flex;
+  justify-content: center;
+}
+
+.disabledWeekButton {
+  pointer-events: none;
+}

@@ -1,0 +1,120 @@
+.entireTable {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "header"
+    "tableContent";
+}
+
+h4 {
+  font-size: 18px;
+  font-weight: 300;
+  margin-left: 0.1em;
+}
+
+.tableHeader {
+  margin: 1em;
+  grid-area: header;
+}
+
+.searchField {
+  display: inline-block;
+  margin-left: 1em;
+}
+
+
+
+.tableOverview {
+  grid-area: tableContent;
+  display: flex;
+  display: grid;
+  padding: 1em;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr min-content;
+  grid-template-areas: "table relations";
+}
+
+
+.relationsButton {
+  border-radius: 7px;
+  min-width: 90px;
+  min-height: 50px;
+  background-color: white;
+  border: solid #90caf9 1px;
+  cursor: pointer;
+}
+
+.activeRelationsButton {
+  background-color: #1565c0;
+  color: white;
+}
+
+.relationsButton:focus,
+.relationsButton:hover {
+  background-color: #1565c0;
+  color: white;
+  outline: none;
+}
+
+.trackerCaptureButton {
+  border-radius: 7px;
+  min-width: 90px;
+  min-height: 50px;
+  background-color: white;
+  border: solid #90caf9 1px;
+  cursor: pointer;
+  outline: none;
+}
+
+.trackerCaptureButton:hover {
+  background-color: #1565c0;
+  color: white;
+}
+
+.normalDue {
+  font-weight: bold;
+  color: #4caf50;
+}
+
+.redOverDue {
+  font-weight: bold;
+  color: #f44336;
+}
+
+
+.redOverDueSVG {
+    margin-left: 0.5em;
+}
+
+.orangeOverDue {
+  font-weight: bold;
+  color: #ff8302;
+}
+
+.closeIcon {
+  min-width: 0;
+  min-height: 0;
+}
+
+.stickyRelations {
+  grid-area: relations;
+  padding-left: 1rem;
+  position: sticky;
+  top: 0;
+}
+
+table {
+  grid-area: table;
+}
+
+.sectionHeaderContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+.spacePagination{
+  margin-top: 15px;
+}
+.tableHover tr:hover td{
+  background-color: #e3f2fd;
+  
+}
