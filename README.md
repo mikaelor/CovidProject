@@ -2,6 +2,11 @@
 Group 4: andrehus, gwendob, ninasjus, mikaelor
 
 The application is an implementation for Case 1 - Working list. 
+
+
+# DISCLAIMER
+This project can not render properly and will recieve ERROR(react #31) due to voided DHIS2 database API service.
+
 ## Functionality
 - Fundamental requirements:
     - Show an overview of index cases and contacts to be contacted on a particular day (default = today), both cases and contacts together in the same list and separately. 
